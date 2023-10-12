@@ -1,4 +1,15 @@
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: 400px;
 }
+
+input {
+    box-sizing: border-box;
+    width: 40%;
+}
+
+/* .input-group {
+    display: flex;
+    width: 100%;
+} */
+

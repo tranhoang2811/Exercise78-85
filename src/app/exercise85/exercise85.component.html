@@ -1,53 +1,57 @@
 <div class="container">
     <table border="1">
-        <tr>
-            <td colspan="2">
-                Chuyển đổi Dương lịch thành Âm lịch
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <div>
-                    <input type="number">
-                    <p>Ngày</p>
-                </div>
-                <div>
-                    <input type="number">
-                    <p>Tháng</p>
-                </div>
-                <div>
-                    <input type="number">
-                    <p>Năm</p>
-                </div>
-                <button>
-                    Chuyển đổi
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                Âm lịch
-            </td>
-        </tr>
-        <tr>
-            <td>Thứ trong tuần</td>
-            <td>{{dayInWeek}}</td>
-        </tr>
-        <tr>
-            <td>Ngày tháng năm âm</td>
-            <td>{{lunarTime}}</td>
-        </tr>
-        <tr>
-            <td>Năm</td>
-            <td>{{year}}</td>
-        </tr>
-        <tr>
-            <td>Tháng</td>
-            <td>{{month}}</td>
-        </tr>
-        <tr>
-            <td>Ngày</td>
-            <td>{{day}}</td>
-        </tr>
+        <thead>
+            <tr>
+                <td colspan="2" style="text-align: center; color: blue;">
+                    Chuyển đổi Dương lịch thành Âm lịch
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td [attr.colspan]="2" class="input-group">
+                    <div>
+                        <input type="number" id="day">
+                        <label for="day">Ngày</label>
+                    </div>
+                    <div>
+                        <input type="number" id="month">
+                        <label day="month">Tháng</label>
+                    </div>
+                    <div>
+                        <input type="number" id="year">
+                        <label for="year">Năm</label>
+                    </div>
+                    <button>
+                        Chuyển đổi
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center; color: blue;">
+                    Âm lịch
+                </td>
+            </tr>
+            <tr>
+                <td>Thứ trong tuần</td>
+                <td>{{dayInWeek}}</td>
+            </tr>
+            <tr>
+                <td>Ngày tháng năm âm</td>
+                <td>{{lunarTime}}</td>
+            </tr>
+            <tr>
+                <td>Năm</td>
+                <td>{{year}}</td>
+            </tr>
+            <tr>
+                <td>Tháng</td>
+                <td>{{month}}</td>
+            </tr>
+            <tr>
+                <td>Ngày</td>
+                <td>{{day}}</td>
+            </tr>
+        </tbody>
     </table>
 </div>
