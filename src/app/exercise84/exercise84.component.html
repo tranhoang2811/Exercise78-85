@@ -1,1 +1,36 @@
-<p>exercise84 works!</p>
+<div class="container">
+    <table border="1" style="width: 400px;">
+        <caption>
+            The quadratic equation
+        </caption>
+        <tr>
+            <td style="text-align: center;">a:</td>
+            <td>
+                <input type="text" [(ngModel)]="a">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">b:</td>
+            <td>
+                <input type="text" [(ngModel)]="b">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">c:</td>
+            <td>
+                <input type="text" [(ngModel)]="c">
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">Result:</td>
+            <td>{{result}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="button" (click)="solve()">Find solution</button>
+                <button type="button" (click)="reset()">Clear</button>
+            </td>
+        </tr>
+    </table>
+</div>

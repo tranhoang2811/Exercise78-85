@@ -1,1 +1,18 @@
-<p>exercise80 works!</p>
+<div class="container">
+    <h1 [class.text-success]="isSuccess">Binding single class - success</h1>
+    <h1 [class]="error">Binding multiple classes using string - error</h1>
+    <h1 [class]="primary">Binding multiple classes using string - primary</h1>
+    <h1 [class]="normal">Binding multiple classes using string - normal</h1>
+    <h1 [class]="complexity">Binding multiple classes using string - complexity</h1>
+    <h1 [class]="multiClass">Binding multiple classes using Record</h1>
+    <hr>
+    <!-- *INFO: Cannot bind using {{}} need to confirm -->
+    <h2 [class.text-success]="isSuccess">Binding single class - success</h2>
+    <h2 class={{error}}>Binding multiple classes using string - error</h2>
+    <h2 class={{primary}}>Binding multiple classes using string - primary</h2>
+    <h2 class={{normal}}>Binding multiple classes using string - normal</h2>
+    <h2 class={{complexity}}>Binding multiple classes using string - complexity</h2>
+    <h2 [class]="multiClass">Binding multiple classes using Record</h2>
+
+    <button type="button" (click)="toggleSuccess()">Toggle success</button>
+</div>

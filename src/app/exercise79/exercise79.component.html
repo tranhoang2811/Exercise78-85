@@ -1,8 +1,10 @@
 <div class="container">
-    <h1>Exercise 79</h1>
-    
-    <h2>Name</h2>
-    <input [disabled]="isDisabled" [value]="name" [id]="nameId"/>
-    <h2>Email</h2>
-    <!-- <input [disable]="isDisabled">{{email}}</input> -->
+    <h1>Exercise 79 external template</h1>
+    <div>
+        <h2>Name</h2>
+        <input [value]="name" [id]="nameId" />
+        <h2>Email</h2>
+        <input [disabled]="isDisabled" value="{{email}}" [id]="emailId">
+    </div>
+    <button type="button" (click)="changeDisabled()">Change disabled</button>
 </div>

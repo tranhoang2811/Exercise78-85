@@ -1,1 +1,15 @@
-<p>exercise82 works!</p>
+<div class="container">
+    <h2>Requirement</h2>
+    <button type="button" (click)="onClick($event)">Click me</button>
+    <input type="text" #name>
+    <button type="button" (click)="onSubmit(name.value)">Submit</button>
+    <h2>Expand</h2>
+    <input type="text" #a>
+    <input type="text" #b>
+    <button type="button" (click)="sum(a.value, b.value)">Sum</button>
+    <button type="button" (click)="subtract(a.value, b.value)">Subtract</button>
+    <button type="button" (click)="multiply(a.value, b.value)">Multiply</button>
+    <button type="button" (click)="divide(a.value, b.value)">Divide</button>
+    <button type="button" (click)="reset()">Reset</button>
+    <p>{{result}}</p>
+</div>

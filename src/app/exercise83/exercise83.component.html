@@ -1,1 +1,12 @@
-<p>exercise83 works!</p>
+<div class="container">
+    <p>
+        Name:
+        <input type="text" [(ngModel)]="name">
+    </p>
+    <p>
+        Address
+        <input type="text" [(ngModel)]="address">
+    </p>
+    <p>Your address: {{address}}</p>
+    <button type="button" (click)="setDefaultAddress()">Set default</button>
+</div>

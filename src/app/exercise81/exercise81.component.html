@@ -1,1 +1,10 @@
-<p>exercise81 works!</p>
+<div class="container">
+    <h1 style="color:red">Tran Dang Hoang</h1>
+    <h1 [style.color]="isError ? 'red' : 'darkgreen'">Tran Dang Hoang</h1>
+
+    <h1 [style]="{'color': 'purple', 'font-size': '26px'}">Tran Dang Hoang</h1>
+    <h1 [style]="textStyle">Tran Dang Hoang</h1>
+
+    <!-- TODO: Confirm about logic -->
+    <h1 [style.text-transform]="'uppercase'">Auto capitalize text</h1>
+</div>

@@ -1,0 +1,23 @@
+.text-success {
+    color: darkgreen
+}
+
+.text-error {
+    color: darkred
+}
+
+.text-primary {
+    color: navy
+}
+
+.text-normal {
+    font-style: italic;
+}
+
+.text-complexity {
+    font-weight: bold;
+    font-style: italic;
+    font-family: Cambria;
+    font-size: 18px;
+    color: blue;
+}
