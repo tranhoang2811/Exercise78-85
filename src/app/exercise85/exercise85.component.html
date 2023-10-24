@@ -1,57 +1,73 @@
 <div class="container">
-    <table border="1">
-        <thead>
-            <tr>
-                <td colspan="2" style="text-align: center; color: blue;">
-                    Chuyển đổi Dương lịch thành Âm lịch
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td [attr.colspan]="2" class="input-group">
-                    <div>
-                        <input type="number" id="day">
-                        <label for="day">Ngày</label>
-                    </div>
-                    <div>
-                        <input type="number" id="month">
-                        <label day="month">Tháng</label>
-                    </div>
-                    <div>
-                        <input type="number" id="year">
-                        <label for="year">Năm</label>
-                    </div>
-                    <button>
-                        Chuyển đổi
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" style="text-align: center; color: blue;">
-                    Âm lịch
-                </td>
-            </tr>
-            <tr>
-                <td>Thứ trong tuần</td>
-                <td>{{dayInWeek}}</td>
-            </tr>
-            <tr>
-                <td>Ngày tháng năm âm</td>
-                <td>{{lunarTime}}</td>
-            </tr>
-            <tr>
-                <td>Năm</td>
-                <td>{{year}}</td>
-            </tr>
-            <tr>
-                <td>Tháng</td>
-                <td>{{month}}</td>
-            </tr>
-            <tr>
-                <td>Ngày</td>
-                <td>{{day}}</td>
-            </tr>
-        </tbody>
-    </table>
+    <form [formGroup]="convertToLunarForm" (ngSubmit)="onSubmit()">
+        <table border="1">
+            <thead>
+                <tr>
+                    <td colspan="2" style="text-align: center; color: blue;">
+                        Chuyển đổi Dương lịch thành Âm lịch
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td [attr.colspan]="2">
+                        <div class="input-group">
+                            <div>
+                                <select id="day" formControlName="day">
+                                    <ng-container *ngFor="let day of dayRange">
+                                        <option [value]="day">{{day}}</option>
+                                    </ng-container>
+                                </select>
+                                <label for="day">Ngày</label>
+                            </div>
+                            <div>
+                                <select id="month" formControlName="month">
+                                    <ng-container *ngFor="let month of monthRange">
+                                        <option [value]="month">{{month}}</option>
+                                    </ng-container>
+                                </select>
+                                <label day="month">Tháng</label>
+                            </div>
+                            <div>
+                                <select id="year" formControlName="year">
+                                    <ng-container *ngFor="let year of yearRange">
+                                        <option [value]="year">{{year}}</option>
+                                    </ng-container>
+                                </select>
+                                <label for="year">Năm</label>
+                            </div>
+                            <button>
+                                Chuyển đổi
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center; color: blue;">
+                        Âm lịch
+                    </td>
+                </tr>
+                <tr>
+                    <td>Thứ trong tuần</td>
+                    <td>{{result['dayOfWeek']}}</td>
+                </tr>
+                <tr>
+                    <td>Ngày tháng năm âm</td>
+                    <td>{{result['lunarDate']}}</td>
+                </tr>
+                <tr>
+                    <td>Năm</td>
+                    <td>{{result['lunarYear']}}</td>
+                </tr>
+                <tr>
+                    <td>Tháng</td>
+                    <td>{{result['lunarMonth']}}</td>
+                </tr>
+                <tr>
+                    <td>Ngày</td>
+                    <td>{{result['lunarDay']}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
 </div>

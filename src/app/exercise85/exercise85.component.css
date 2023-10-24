@@ -8,8 +8,10 @@ input {
     width: 40%;
 }
 
-/* .input-group {
+.input-group {
     display: flex;
     width: 100%;
-} */
+    justify-content: space-around;
+    padding: 4px 0px
+}
 
